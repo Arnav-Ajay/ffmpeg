@@ -1,0 +1,272 @@
+{
+    "session1": {
+        "num_input" : 4,
+        "input_files": {
+            "file1" : {
+                "filename" : "LR1.mp4",
+                "filepath" : "./files/LR1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 240,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file2" : {
+                "filename" : "WB1.mp4",
+                "filepath" : "./files/WB1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 45,
+                "duration" : 261,
+                "audio_c" : false,
+                "video_c" : true
+            },
+            "file3" : {
+                "filename" : "vid1.mp4",
+                "filepath" : "./files/vid1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 15,
+                "duration" : 30,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file4" : {
+                "filename" : "vid2.mp4",
+                "filepath" : "./files/vid2.mp4",
+                "filetype" : "mp4",
+                "start_time" : 20,
+                "duration" : 30,
+                "audio_c" : true,
+                "video_c" : true
+            }
+        },
+        "duration" : 306
+    },
+    "session2": {
+        "num_input" : 4,
+        "input_files": {
+            "file1" : {
+                "filename" : "LR3.webm",
+                "filepath" : "./files/LR3.webm",
+                "filetype" : "webm",
+                "start_time" : 0,
+                "duration" : 172,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file2" : {
+                "filename" : "LR4.webm",
+                "filepath" : "./files/LR4.webm",
+                "filetype" : "webm",
+                "start_time" : 20,
+                "duration" : 111,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file3" : {
+                "filename" : "LR5.webm",
+                "filepath" : "./files/LR5.webm",
+                "filetype" : "webm",
+                "start_time" : 35,
+                "duration" : 269,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file4" : {
+                "filename" : "WB2.mp4",
+                "filepath" : "./files/WB2.mp4",
+                "filetype" : "mp4",
+                "start_time" : 15,
+                "duration" : 957,
+                "audio_c" : false,
+                "video_c" : true
+            }
+        },
+        "duration" : 972
+    },
+    "session3": {
+        "num_input" : 4,
+        "input_files": {
+            "file1" : {
+                "filename" : "LR5.webm",
+                "filepath" : "./files/LR5.webm",
+                "filetype" : "webm",
+                "start_time" : 5,
+                "duration" : 296,
+                "audio_c" : true,
+                 "video_c" : true
+            },
+            "file2" : {
+                "filename" : "WB3.webm",
+                "filepath" : "./files/WB3.webm",
+                "filetype" : "webm",
+                "start_time" : 10,
+                "duration" : 64,
+                "audio_c" : false,
+                "video_c" : true
+            },
+            "file3" : {
+                "filename" : "LR6.webm",
+                "filepath" : "./files/LR6.webm",
+                "filetype" : "webm",
+                "start_time" : 25,
+                "duration" : 239,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file4" : {
+                "filename" : "LR7.webm",
+                "filepath" : "./files/LR7.webm",
+                "filetype" : "webm",
+                "start_time" : 40,
+                "duration" : 300,
+                "audio_c" : true,
+                "video_c" : true
+            }
+        },
+        "duration" : 340
+    },
+    "session4": {
+        "num_input" : 4,
+        "input_files": {
+            "file1" : {
+                "filename" : "LR3.webm",
+                "filepath" : "./files/LR3.webm",
+                "filetype" : "webm",
+                "start_time" : 0,
+                "duration" : 172,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file2" : {
+                "filename" : "LR5.webm",
+                "filepath" : "./files/LR5.webm",
+                "filetype" : "webm",
+                "start_time" : 10,
+                "duration" : 296,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file3" : {
+                "filename" : "WB3.webm",
+                "filepath" : "./files/WB3.webm",
+                "filetype" : "webm",
+                "start_time" : 20,
+                "duration" : 64,
+                "audio_c" : false,
+                "video_c" : true
+            },
+            "file4" : {
+                "filename" : "Zoom.webm",
+                "filepath" : "./files/Zoom.webm",
+                "filetype" : "webm",
+                "start_time" : 65,
+                "duration" : 154,
+                "audio_c" : false,
+                "video_c" : true
+            }
+        },
+        "duration" : 306
+    },
+    "session5": {
+        "num_input" : 3,
+        "input_files": {
+            "file1" : {
+                "filename" : "vid1.mp4",
+                "filepath" : "./files/vid1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 30,
+                "duration" : 60,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file2" : {
+                "filename" : "vid2.mp4",
+                "filepath" : "./files/vid2.mp4",
+                "filetype" : "mp4",
+                "start_time" : 60,
+                "duration" : 30,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file3" : {
+                "filename" : "WB1.mp4",
+                "filepath" : "./files/WB1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 261,
+                "audio_c" : false,
+                "video_c" : true
+            }
+        },
+        "duration" : 261
+    },
+    "session6": {
+        "num_input" : 2,
+        "input_files": {
+            "file1" : {
+                "filename" : "vid1.mp4",
+                "filepath" : "./files/vid1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 15,
+                "duration" : 60,
+                "audio_c" : true,
+                "video_c" : true
+            },
+            "file2" : {
+                "filename" : "vid2.mp4",
+                "filepath" : "./files/vid2.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 30,
+                "audio_c" : true,
+                "video_c" : true
+            }
+        },
+        "duration" : 75
+    },
+    "session7": {
+        "num_input" : 1,
+        "input_files": {
+            "file1" : {
+                "filename" : "vid1.mp4",
+                "filepath" : "./files/vid1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 60,
+                "audio_c" : true,
+                "video_c" : true
+            }
+        },
+        "duration" : 60
+    },
+    "session8": {
+        "num_input" : 1,
+        "input_files": {
+            "file1" : {
+                "filename" : "WB1.mp4",
+                "filepath" : "./files/WB1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 261,
+                "audio_c" : false,
+                "video_c" : true
+            }
+        },
+        "duration" : 261
+    },
+    "session9": {
+        "num_input" : 1,
+        "input_files": {
+            "file1" : {
+                "filename" : "Zoom.webm",
+                "filepath" : "./files/Zoom.webm",
+                "filetype" : "webm",
+                "start_time" : 65,
+                "duration" : 154,
+                "audio_c" : false,
+                "video_c" : true
+            }
+        },
+        "duration" : 261
+    }
+}
