@@ -1,8 +1,12 @@
 import preprocess as p
 import ffmpeg
 
-session_number = 7
+import rules as r
+
+session_number = 1
 base = './files/background.png'
+
+output_filename = './output/session' + str(session_number) + '.mp4'
 
 
 #    initiating key variables
@@ -42,3 +46,35 @@ for i in session_data.input_files:
 
 #    you can overlay a video on a video only, so convert image to video.
 base_image = ffmpeg.input(base, loop=1, framerate=48, t=session_data.duration).filter('scale', 640, 480)
+
+#    if there is only one input file, no need to overlay
+if(session_data.num_input==1):
+
+    #    if input file has only video component
+    if(len(input_audios)==0):
+        output = ffmpeg.output(input_videos[0], output_filename, **{'b:v':'48k'}).run()
+
+    #    if input file has only audio component
+    elif(len(input_videos)==0):
+        output = ffmpeg.output(input_audios[0], output_filename, **{'b:a':'48k'}).run()
+
+
+    else:
+        output = ffmpeg.output(input_videos[0], input_audios[0], output_filename, **{'b:v':'48k', 'b:a':'48k'}).run()
+
+
+#    for more than one input files
+else:
+    overlay = ffmpeg.overlay(base_image, input_videos[0], x=0, y=0, eof_action='pass')
+    n = len(input_videos)
+    n-=1
+    for i in range(1, len(input_videos)):
+
+        cord = p.get_cord(i-1, n)
+        overlay = ffmpeg.overlay(overlay, input_videos[i], x=cord[0], y=cord[1], eof_action='pass')
+
+    #    for num of input audios less than 3; returns audio
+    audio = r.check_num_audios(input_audios)
+
+    r.create_output(input_audios, audio, overlay, session_number, output_filename)
+

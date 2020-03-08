@@ -1,8 +1,6 @@
 import ffmpeg
 import json
 
-import rules as r
-
 import interface.fileinterface as fi
 import interface.sessioninterface as si
 
