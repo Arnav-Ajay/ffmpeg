@@ -35,7 +35,7 @@ ffmpeg
 	|
 	|-rules.py			Contains rules/format of how each vid/audio should be
 	|
-    |-temp             Contains temp files. these get generated and deleted during run-time
-    |
+    	|-temp             Contains temp files. these get generated and deleted during run-time
+    	|
 	|-Output			directory containing all output files
 		|-output.mp4
