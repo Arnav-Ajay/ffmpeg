@@ -15,7 +15,7 @@ Install the following:
 
 To Run:
 
-Create 3 empty folders inside the project directory, 'files', output, temp.
+Create 3 empty folders inside the project directory, 'files', 'output', 'temp'.
 
 Place all input files in ffmpeg/files/ directory.
 
