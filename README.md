@@ -40,7 +40,7 @@ Place all input files in ffmpeg/files/ directory.
 
 Make the required changes in ffmpeg/data.json file
 
-Change background images from fmpg.py
+Change background images in ffmpeg/fmpg.py, line 7
 
 # data.json Format:
 
