@@ -33,3 +33,64 @@ Directory Structure:
 	├── README.md
 	├── rules.py				#    Contains rules/format of how each vid/audio should be
 	├── temp				#   Directory containing all temp files, these get generated and deleted during run time
+
+For running this using your video/audio files:
+
+Place all input files in ffmpeg/files/ directory
+Make the required changes in ffmpeg/data.json file
+
+Change background images from fmpg.py
+
+data.json format:
+
+	{
+	    "session1": {
+		"num_input" : 4,
+		"input_files": {
+		    "file1" : {
+			"filename" : "LR1.mp4",
+			"filepath" : "./files/LR1.mp4",
+			"filetype" : "mp4",
+			"start_time" : 0,
+			"duration" : 240,
+			"audio_c" : true,
+			"video_c" : true
+		    },
+		    "file2" : {
+			"filename" : "WB1.mp4",
+			"filepath" : "./files/WB1.mp4",
+			"filetype" : "mp4",
+			"start_time" : 45,
+			"duration" : 261,
+			"audio_c" : false,
+			"video_c" : true
+		    },
+		    "file3" : {
+			"filename" : "vid1.mp4",
+			"filepath" : "./files/vid1.mp4",
+			"filetype" : "mp4",
+			"start_time" : 15,
+			"duration" : 30,
+			"audio_c" : true,
+			"video_c" : true
+		    },
+		    "file4" : {
+			"filename" : "vid2.mp4",
+			"filepath" : "./files/vid2.mp4",
+			"filetype" : "mp4",
+			"start_time" : 20,
+			"duration" : 30,
+			"audio_c" : true,
+			"video_c" : true
+		    }
+		},
+		"duration" : 306
+	    }
+	    "session2":{
+	    
+	    },
+	    .
+	    .
+	    .
+	}
+	    
