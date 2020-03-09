@@ -1,6 +1,6 @@
-# ffmpeg
+# ffmpeg-python
 
-Developed/Tested on Elementary OS
+Developed/Tested on Elementary OS 5.1 Hera
 
 Clone the git repository:
 
