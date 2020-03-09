@@ -3,6 +3,8 @@
 Developed/Tested on Elementary OS 5.1 Hera
 Python 3.6
 
+Worked/Tested with .mp4 and .webm files
+
 Clone the git repository:
 
 	git clone https://github.com/Arnav-Ajay/ffmpeg.git
