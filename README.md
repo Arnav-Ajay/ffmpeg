@@ -1,6 +1,6 @@
 # ffmpeg
 
-For Linux Distributions:
+Developed/Tested on Elementary OS
 
 Clone the git repository:
 
