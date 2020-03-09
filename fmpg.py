@@ -1,9 +1,9 @@
-import preprocess as p
 import ffmpeg
 
 import rules as r
+import preprocess as p
 
-session_number = 1
+session_number = 5
 base = './files/background.png'
 
 output_filename = './output/session' + str(session_number) + '.mp4'
@@ -21,7 +21,7 @@ j=0
 data = p.get_data(session_number)
 print(data.input_files[0].filename)
 
-session_data = p.convert_to_mono(data)
+session_data = r.convert_to_mono(data)
 print(session_data.input_files[0].filename)
 
 for i in session_data.input_files:
@@ -70,11 +70,13 @@ else:
     n-=1
     for i in range(1, len(input_videos)):
 
-        cord = p.get_cord(i-1, n)
+        cord = r.get_cord(i-1, n)
         overlay = ffmpeg.overlay(overlay, input_videos[i], x=cord[0], y=cord[1], eof_action='pass')
 
     #    for num of input audios less than 3; returns audio
-    audio = r.check_num_audios(input_audios)
+    audio = p.check_num_audios(input_audios)
 
-    r.create_output(input_audios, audio, overlay, session_number, output_filename)
+    p.create_output(input_audios, audio, overlay, session_number, output_filename)
 
+
+p.empty_temp()
