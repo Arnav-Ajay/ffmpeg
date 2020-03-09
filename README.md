@@ -1,5 +1,7 @@
 # ffmpeg
 
+For Linux Distributions:
+
 Clone the git repository:
 
 	git clone https://github.com/Arnav-Ajay/ffmpeg.git
