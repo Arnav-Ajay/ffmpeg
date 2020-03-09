@@ -21,11 +21,11 @@ To Run:
 
 	Make the required changes in ffmpeg/data.json file
 
-Change background images in:
+Change background image from:
 	
 	ffmpeg/fmpg.py, line 7
 	
-Select a perticular session by it's no:
+Select a perticular session by it's ID:
 
 	ffmpeg/fmpy.py, line 6
 
