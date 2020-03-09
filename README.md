@@ -15,13 +15,19 @@ Install the following:
 
 To Run:
 
-Create 3 empty folders inside the project directory, 'files', 'output', 'temp'.
+	Create 3 empty folders inside the project directory, 'files', 'output', 'temp'.
 
-Place all input files in ffmpeg/files/ directory.
+	Place all input files in ffmpeg/files/ directory.
 
-Make the required changes in ffmpeg/data.json file
+	Make the required changes in ffmpeg/data.json file
 
-Change background images in ffmpeg/fmpg.py, line 7
+Change background images in:
+	
+	ffmpeg/fmpg.py, line 7
+	
+Select a perticular session by it's no:
+
+	ffmpeg/fmpy.py, line 6
 
 from inside the project directory, type:
 		
