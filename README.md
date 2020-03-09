@@ -16,7 +16,7 @@ from inside the project directory, type:
 		
 	python3 fmpg.py
 
-Directory Structure:
+# Directory Structure
 	
 	├── data.json				#    Json file containing data of each session.
 	├── files				#    Directory containing all input files
@@ -34,14 +34,14 @@ Directory Structure:
 	├── rules.py				#    Contains rules/format of how each vid/audio should be
 	├── temp				#   Directory containing all temp files, these get generated and deleted during run time
 
-For running this using your video/audio files:
+# Run this using your Video/Audio Files
 
 Place all input files in ffmpeg/files/ directory
 Make the required changes in ffmpeg/data.json file
 
 Change background images from fmpg.py
 
-data.json format:
+# data.json Format:
 
 	{
 	    "session1": {
