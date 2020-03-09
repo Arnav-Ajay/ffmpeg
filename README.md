@@ -17,11 +17,9 @@ from inside the project directory, type:
 	python3 fmpg.py
 
 Directory Structure:
-
-.
 	
-	├── data.json
-	├── files
+	├── data.json				#    Json file containing data of each session.
+	├── files				#    Directory containing all input files
 	│   ├── background.png
 	│   ├── LR1.mp4
 	│   ├── LR2.mp4
@@ -36,14 +34,11 @@ Directory Structure:
 	│   ├── WB2.mp4
 	│   ├── WB3.webm
 	│   └── Zoom.webm
-	├── fmpg.py
-	├── interface
+	├── fmpg.py				#    FFMPEG-Python Implementation
+	├── interface				#    Directory containing File and Session Interface
 	│   ├── fileinterface.py
-	│   ├── __pycache__
-	│   │   ├── fileinterface.cpython-36.pyc
-	│   │   └── sessioninterface.cpython-36.pyc
 	│   └── sessioninterface.py
-	├── output
+	├── output				#   Directory containing all output files 
 	│   ├── session1.mp4
 	│   ├── session2.mp4
 	│   ├── session3.mp4
@@ -53,8 +48,8 @@ Directory Structure:
 	│   ├── session7.mp4
 	│   ├── session8.mp4
 	│   └── session9.mp4
-	├── preprocess.py
+	├── preprocess.py			#    Support python file for fmpg.py
 	├── README.md
-	├── rules.py 
-	├── temp
+	├── rules.py				#    Contains rules/format of how each vid/audio should be
+	├── temp				#   Directory containing all temp files, these get generated and deleted during run time
 	└── test.py
