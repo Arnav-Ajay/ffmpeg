@@ -118,3 +118,23 @@ Change background images in ffmpeg/fmpg.py, line 7
 	get_dim() : Size of input file differs based of no. of inputs.
 	
 	get_cord() : Posittion of input file differs based of no. of inputs.
+	
+# Fmpg.py
+
+	P.get_data()
+	
+	R.convert_to_mono()
+	
+	P.get_audio_component()
+	
+	P.get_video_component()
+	
+	R.get_cord()
+
+	P.check_num_audios()
+	
+	P.create_output()
+		
+		R.get_dim()
+		
+	P.empty_temp()
