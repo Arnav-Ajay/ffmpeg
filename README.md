@@ -14,6 +14,14 @@ Install the following:
 
 To Run:
 
+Create 3 empty folders inside the project directory, 'files', output, temp.
+
+Place all input files in ffmpeg/files/ directory.
+
+Make the required changes in ffmpeg/data.json file
+
+Change background images in ffmpeg/fmpg.py, line 7
+
 from inside the project directory, type:
 		
 	python3 fmpg.py
@@ -35,14 +43,6 @@ from inside the project directory, type:
 	├── README.md
 	├── rules.py				#    Contains rules/format of how each vid/audio should be
 	├── temp				#   Directory containing all temp files, these get generated and deleted during run time
-
-# Run this using your Video/Audio Files
-
-Place all input files in ffmpeg/files/ directory.
-
-Make the required changes in ffmpeg/data.json file
-
-Change background images in ffmpeg/fmpg.py, line 7
 
 # data.json Format:
 
