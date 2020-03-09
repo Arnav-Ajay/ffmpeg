@@ -64,7 +64,8 @@ from inside the project directory, type:
 			"start_time" : 0,
 			"duration" : 240,
 			"audio_c" : true,
-			"video_c" : true
+			"video_c" : true,
+            "flag" : 0
 		    },
 		    "file2" : {
 			"filename" : "WB1.mp4",
@@ -73,7 +74,8 @@ from inside the project directory, type:
 			"start_time" : 45,
 			"duration" : 261,
 			"audio_c" : false,
-			"video_c" : true
+			"video_c" : true,
+            "flag" : 0
 		    },
 		    "file3" : {
 			"filename" : "vid1.mp4",
@@ -82,7 +84,8 @@ from inside the project directory, type:
 			"start_time" : 15,
 			"duration" : 30,
 			"audio_c" : true,
-			"video_c" : true
+			"video_c" : true,
+            "flag" : 2
 		    },
 		    "file4" : {
 			"filename" : "vid2.mp4",
@@ -91,7 +94,8 @@ from inside the project directory, type:
 			"start_time" : 20,
 			"duration" : 30,
 			"audio_c" : true,
-			"video_c" : true
+			"video_c" : true,
+            "flag" : 1
 		    }
 		},
 		"duration" : 306
@@ -147,3 +151,26 @@ from inside the project directory, type:
 		R.get_dim()
 		
 	P.empty_temp()
+
+# Attributes of File Object
+
+	filename : Name of File (String),
+	filepath : Path of File (String),
+	filetype : File Extension (String),
+	start_time : Time at which the video/ audio starts (in Seconds),
+	duration : Total duration of input file (in Seconds),
+	audio_c : Tells if input file has audio component (Boolean),
+	video_c : Tells if input file has Video component (Boolean),
+    flag : Ranges from 0 to 3. indicates which component to choose (Number)
+			0 : No changes
+			1 : Only audio component needed
+			2 : Only video component needed
+			3 : Skip file altogether(not required)
+
+	
+# Attributes of Session Object
+
+	num_inputs : Number of input files (Number),
+	input_files : list of input files (File Object),
+	duration : Total duration of session (in Seconds)
+

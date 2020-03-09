@@ -26,8 +26,9 @@ def get_data(s_id):
         d = data["session" + str(s_id)]["input_files"]["file" + str(i+1)]["duration"]
         ac = data["session" + str(s_id)]["input_files"]["file" + str(i+1)]["audio_c"]
         vc = data["session" + str(s_id)]["input_files"]["file" + str(i+1)]["video_c"]
+        f = data["session" + str(s_id)]["input_files"]["file" + str(i+1)]["flag"]
 
-        input_file = fi.FileInterface(name, path, ty, st, d, ac, vc)
+        input_file = fi.FileInterface(name, path, ty, st, d, ac, vc, f)
 
         session_files.append(input_file)
 
@@ -35,16 +36,26 @@ def get_data(s_id):
 
     return session
 
-
 def get_audio_comp(i, delay):
 
     input_i = ffmpeg.input(i.filepath)
 
-    if(i.video_c == True and i.audio_c == True):
-        return input_i['a'].filter('adelay', delay)
+    flag = i.flag
+
+    if(flag == 0 or flag == 1):
+
+        if(i.video_c == True and i.audio_c == True):
+            return input_i['a'].filter('adelay', delay)
+
+        else:
+            return input_i.filter('adelay', delay)
+
+    elif(flag == 2 or flag == 3):
+
+        return None
 
     else:
-        return input_i.filter('adelay', delay)
+        return None
 
 def get_video_comp(i, num_inputs, offset):
 
@@ -52,14 +63,23 @@ def get_video_comp(i, num_inputs, offset):
 
     size = r.get_dim(num_inputs)
 
+    flag = i.flag
 
-    #    if video component present in input file
-    if(i.video_c == True and i.audio_c == True):
-        return input_i['v'].filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
+    if(flag == 0 or flag == 2):
+        #    if video component present in input file
+        if(i.video_c == True and i.audio_c == True):
+            return input_i['v'].filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
 
-    #    if audio component present in input file
+        #    if audio component present in input file
+        else:
+            return input_i.filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
+
+    elif(flag == 1 or flag == 3):
+
+        return None
+
     else:
-        return input_i.filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
+        return None
 
 def check_num_audios(input_audios):
 

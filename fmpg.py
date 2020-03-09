@@ -3,7 +3,7 @@ import ffmpeg
 import rules as r
 import preprocess as p
 
-session_number = 5
+session_number = 11
 base = './files/background.png'
 
 output_filename = './output/session' + str(session_number) + '.mp4'
@@ -34,11 +34,15 @@ for i in session_data.input_files:
 
     if(i.audio_c == True):
         audio = p.get_audio_comp(i, delay)
-        input_audios.append(audio)
+
+        if(audio!=None):
+            input_audios.append(audio)
 
     if(i.video_c == True):
         video = p.get_video_comp(i, len(session_data.input_files), offset)
-        input_videos.append(video)
+
+        if(video!=None):
+            input_videos.append(video)
 
      #    if input file has neither of the components, i.e an error file, then
     if(i.video_c == False and i.audio_c == False):

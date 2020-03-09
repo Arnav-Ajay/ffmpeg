@@ -7,8 +7,9 @@ class FileInterface:
     duration = None
     audio_c = None
     video_c = None
+    flag = None
 
-    def __init__(self, filename, filepath, filetype, start_time, duration, audio_c, video_c):
+    def __init__(self, filename, filepath, filetype, start_time, duration, audio_c, video_c, flag):
         self.filename = filename
         self.filepath = filepath
         self.filetype = filetype
@@ -16,3 +17,4 @@ class FileInterface:
         self.duration = duration
         self.audio_c = audio_c
         self.video_c = video_c
+        self.flag = flag
