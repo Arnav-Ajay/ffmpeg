@@ -96,4 +96,25 @@ Change background images in ffmpeg/fmpg.py, line 7
 	    .
 	    .
 	}
-	    
+
+# Preprocess.py
+
+	get_data() : Fetches data from json file to File and Session Object
+	
+	get_audio_component() : Seperates Audio Component from input files
+	
+	get_video_component() : Seperates Video Component from input files
+	
+	check_num_audios() : Return mixed audio for no. of audios < 3. This is the first step of mixing audios together
+	
+	create_output() : Creates output for more than 1 input files
+	
+	empty_temp() : Deletes all files in Temp folder
+	
+# Rules.py
+
+	convert_to_mono() : Converts all webm files and files containing audio to mono, mp4 format.
+
+	get_dim() : Size of input file differs based of no. of inputs.
+	
+	get_cord() : Posittion of input file differs based of no. of inputs.
