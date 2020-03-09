@@ -36,7 +36,8 @@ from inside the project directory, type:
 
 # Run this using your Video/Audio Files
 
-Place all input files in ffmpeg/files/ directory
+Place all input files in ffmpeg/files/ directory.
+
 Make the required changes in ffmpeg/data.json file
 
 Change background images from fmpg.py
@@ -87,7 +88,9 @@ Change background images from fmpg.py
 		"duration" : 306
 	    }
 	    "session2":{
-	    
+	    .
+	    .
+	    .
 	    },
 	    .
 	    .
