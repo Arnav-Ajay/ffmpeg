@@ -91,9 +91,9 @@ from inside the project directory, type:
 		"duration" : 306
 	    }
 	    "session2":{
-	    .
-	    .
-	    .
+	    	.
+	    	.
+	    	.
 	    },
 	    .
 	    .
