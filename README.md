@@ -1,7 +1,8 @@
 # ffmpeg
 
 Clone the git repository:
-    git clone https://github.com/Arnav-Ajay/ffmpeg.git
+    
+    	git clone https://github.com/Arnav-Ajay/ffmpeg.git
 
 Install the following:
 
