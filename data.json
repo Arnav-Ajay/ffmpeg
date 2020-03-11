@@ -27,7 +27,7 @@
                 "filepath" : "./files/vid1.mp4",
                 "filetype" : "mp4",
                 "start_time" : 15,
-                "duration" : 30,
+                "duration" : 60,
                 "audio_c" : true,
                 "video_c" : true,
                 "flag" : 0
@@ -360,14 +360,14 @@
                 "duration" : 261,
                 "audio_c" : false,
                 "video_c" : true,
-                "flag" : 1
+                "flag" : 2
             },
             "file3" : {
                 "filename" : "vid1.mp4",
                 "filepath" : "./files/vid1.mp4",
                 "filetype" : "mp4",
                 "start_time" : 15,
-                "duration" : 30,
+                "duration" : 60,
                 "audio_c" : true,
                 "video_c" : true,
                 "flag" : 0
@@ -384,5 +384,109 @@
             }
         },
         "duration" : 306
+    },
+    "session12": {
+        "num_input" : 5,
+        "input_files": {
+            "file1" : {
+                "filename" : "a23442d3-e5fb-40d5-bd7a-60344265403b.mp4",
+                "filepath" : "./files/a23442d3-e5fb-40d5-bd7a-60344265403b.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 320,
+                "audio_c" : true,
+                "video_c" : false,
+                "flag" : 1
+            },           
+            "file2" : {
+                "filename" : "a85b7caa-7c08-4f1f-9e10-1d7060075999.mp4",
+                "filepath" : "./files/a85b7caa-7c08-4f1f-9e10-1d7060075999.mp4",
+                "filetype" : "mp4",
+                "start_time" : 57,
+                "duration" : 267,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 0
+            },
+            "file3" : {
+                "filename" : "6f083c51-1ef7-4d62-b7e5-f74ce4b26134.mp4",
+                "filepath" : "./files/6f083c51-1ef7-4d62-b7e5-f74ce4b26134.mp4",
+                "filetype" : "mp4",
+                "start_time" : 57,
+                "duration" : 268,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 2
+               
+            },
+            "file4" : {
+                "filename" : "white1.mp4",
+                "filepath" : "./files/white1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 326,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 2
+            },
+            "file5" : {
+                "filename" : "714376c5-5996-4840-9943-478ccb68c743.mp4",
+                "filepath" : "./files/714376c5-5996-4840-9943-478ccb68c743.mp4",
+                "filetype" : "mp4",
+                "start_time" : 187,
+                "duration" : 98,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 1
+            }       
+        },
+        "duration" : 327
+    },
+    "session13": {
+        "num_input" : 4,
+        "input_files": {
+            "file1" : {
+                "filename" : "a85b7caa-7c08-4f1f-9e10-1d7060075999.mp4",
+                "filepath" : "./files/a85b7caa-7c08-4f1f-9e10-1d7060075999.mp4",
+                "filetype" : "mp4",
+                "start_time" : 57,
+                "duration" : 267,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 0
+            },
+            "file2" : {
+                "filename" : "6f083c51-1ef7-4d62-b7e5-f74ce4b26134.mp4",
+                "filepath" : "./files/6f083c51-1ef7-4d62-b7e5-f74ce4b26134.mp4",
+                "filetype" : "mp4",
+                "start_time" : 57,
+                "duration" : 268,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 2
+               
+            },
+            "file3" : {
+                "filename" : "white1.mp4",
+                "filepath" : "./files/white1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 326,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 2
+            },
+            "file4" : {
+                "filename" : "714376c5-5996-4840-9943-478ccb68c743.mp4",
+                "filepath" : "./files/714376c5-5996-4840-9943-478ccb68c743.mp4",
+                "filetype" : "mp4",
+                "start_time" : 187,
+                "duration" : 98,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 1
+            }       
+        },
+        "duration" : 327
     }
 }

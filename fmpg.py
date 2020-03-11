@@ -3,7 +3,7 @@ import ffmpeg
 import rules as r
 import preprocess as p
 
-session_number = 11
+session_number = 12
 base = './files/background.png'
 
 output_filename = './output/session' + str(session_number) + '.mp4'

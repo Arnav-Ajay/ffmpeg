@@ -12,12 +12,12 @@ def convert_to_mono(sesh):
             continue
 
         elif(i.audio_c == True):
-            ffmpeg.input(i.filepath).output('./temp/mono_mp4' + str(j) + '.mp4', ac=1,  **{'b:a':'48k'}).run()
+            ffmpeg.input(i.filepath).output('./temp/mono_mp4' + str(j) + '.mp4', ac=1,  **{'b:a':'48k'}, max_muxing_queue_size=99000).run()
 
         else:
-            ffmpeg.input(i.filepath).output('./temp/mono_mp4' + str(j) + '.mp4',  **{'b:v':'48k'}, max_muxing_queue_size=9000).run()
+            ffmpeg.input(i.filepath).output('./temp/mono_mp4' + str(j) + '.mp4',  **{'b:v':'48k'}, max_muxing_queue_size=99000).run()
 
-        input_i = ffmpeg.input('./temp/mono_mp4' + str(j) + '.mp4')
+        input_i = ffmpeg.input('./temp/mono_mp4' + str(j) + '.mp4', max_muxing_queue_size=99000)
 
         i.filetype = 'mp4'
         i.filename = 'mono_mp4' + str(j) + '.mp4'
@@ -37,7 +37,7 @@ def get_dim(i):
     elif i == 2:  
         w = 320
         h = -1
-   
+
     elif i == 3:  
         w = 320
         h = -1
@@ -49,7 +49,7 @@ def get_dim(i):
     else:
         print("\n\nPlease add more conditions\nnum of input files is greater than 4\n\nedit in preprocess.py\n\n")
     
-        w = -1
+        w = 320
         h = -1
 
     return (w, h)
@@ -91,6 +91,30 @@ def get_cord(i, j):
         elif i == 2:
             x = 320
             y = 240
+
+        else:
+            print('\n\nsomething went wrong\n\n')
+   
+            x = -1
+            y = -1
+
+    elif j == 4:
+
+        if i == 0:   
+            x = 320
+            y = 0
+   
+        elif i == 1: 
+            x = 0
+            y = 240
+   
+        elif i == 2:
+            x = 320
+            y = 240
+
+        elif i == 3:
+            x = 150
+            y = 150
 
         else:
             print('\n\nsomething went wrong\n\n')
