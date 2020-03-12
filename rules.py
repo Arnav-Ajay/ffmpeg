@@ -31,7 +31,7 @@ def get_dim(i):
     h = 0
 
     if i == 1:
-        w = 1280
+        w = 640
         h = -1
    
     elif i == 2:  
@@ -87,14 +87,14 @@ def get_cord(i, j):
         elif i == 1: 
             x = 0
             y = 240
-   
+
         elif i == 2:
             x = 320
             y = 240
 
         else:
             print('\n\nsomething went wrong\n\n')
-   
+
             x = -1
             y = -1
 
@@ -103,11 +103,11 @@ def get_cord(i, j):
         if i == 0:   
             x = 320
             y = 0
-   
+
         elif i == 1: 
             x = 0
             y = 240
-   
+
         elif i == 2:
             x = 320
             y = 240
@@ -118,13 +118,13 @@ def get_cord(i, j):
 
         else:
             print('\n\nsomething went wrong\n\n')
-   
+
             x = -1
             y = -1
 
     else:
         print('\n\nsomething went wrong\n\n')
-   
+
         x = -1
         y = -1
 

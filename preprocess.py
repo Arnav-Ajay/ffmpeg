@@ -57,6 +57,27 @@ def get_audio_comp(i, delay):
     else:
         return None
 
+def get_audio_comp_test(i):
+
+    input_i = ffmpeg.input(i.filepath)
+
+    flag = i.flag
+
+    if(flag == 0 or flag == 1):
+
+        if(i.video_c == True and i.audio_c == True):
+            return input_i['a']
+
+        else:
+            return input_i
+
+    elif(flag == 2 or flag == 3):
+
+        return None
+
+    else:
+        return None
+
 def get_video_comp(i, num_inputs, offset):
 
     input_i = ffmpeg.input(i.filepath)
@@ -73,6 +94,30 @@ def get_video_comp(i, num_inputs, offset):
         #    if audio component present in input file
         else:
             return input_i.filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
+
+    elif(flag == 1 or flag == 3):
+
+        return None
+
+    else:
+        return None
+
+def get_video_comp_test(i, num_inputs):
+
+    input_i = ffmpeg.input(i.filepath)
+
+    size = r.get_dim(num_inputs)
+
+    flag = i.flag
+
+    if(flag == 0 or flag == 2):
+        #    if video component present in input file
+        if(i.video_c == True and i.audio_c == True):
+            return input_i['v'].filter('scale', size[0], -1).filter('setdar', '16/9')
+
+        #    if audio component present in input file
+        else:
+            return input_i.filter('scale', size[0], -1).filter('setdar', '16/9')
 
     elif(flag == 1 or flag == 3):
 
@@ -107,6 +152,15 @@ def create_output(input_audios, audio, overlay, session_num, name):
 
         output = ffmpeg.output(overlay, audio, name, **{'b:v':'48k', 'b:a':'48k'}).run()
 
+def create_sub_output(overlay, id, name, sub_input):
+
+    name = './temp/sub_op' + str(id) + '.mp4'
+
+    output = ffmpeg.output(overlay, name, **{'b:v':'48k'}).run()
+
+    sub_input.append(name)
+
+    return sub_input
 
 def empty_temp():
 
