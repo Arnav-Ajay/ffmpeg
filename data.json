@@ -99,7 +99,7 @@
                 "filepath" : "./files/LR5.webm",
                 "filetype" : "webm",
                 "start_time" : 5,
-                "duration" : 296,
+                "duration" : 269,
                 "audio_c" : true,
                  "video_c" : true,
                  "flag" : 0
@@ -109,7 +109,7 @@
                 "filepath" : "./files/WB3.webm",
                 "filetype" : "webm",
                 "start_time" : 10,
-                "duration" : 64,
+                "duration" : 58,
                 "audio_c" : false,
                 "video_c" : true,
                 "flag" : 0
@@ -155,7 +155,7 @@
                 "filepath" : "./files/LR5.webm",
                 "filetype" : "webm",
                 "start_time" : 10,
-                "duration" : 296,
+                "duration" : 269,
                 "audio_c" : true,
                 "video_c" : true,
                 "flag" : 0
@@ -165,7 +165,7 @@
                 "filepath" : "./files/WB3.webm",
                 "filetype" : "webm",
                 "start_time" : 20,
-                "duration" : 64,
+                "duration" : 58,
                 "audio_c" : false,
                 "video_c" : true,
                 "flag" : 0
@@ -181,7 +181,7 @@
                 "flag" : 0
             }
         },
-        "duration" : 306
+        "duration" : 279
     },
     "session5": {
         "num_input" : 3,
@@ -291,7 +291,7 @@
                 "flag" : 0
             }
         },
-        "duration" : 261
+        "duration" : 219
     },
     "session10": {
         "num_input" : 4,
@@ -321,7 +321,7 @@
                 "filepath" : "./files/vid1.mp4",
                 "filetype" : "mp4",
                 "start_time" : 15,
-                "duration" : 30,
+                "duration" : 60,
                 "audio_c" : true,
                 "video_c" : true,
                 "flag" : 2
@@ -373,6 +373,6 @@
                 "flag" : 0
             }
         },
-        "duration" : 306
+        "duration" : 111
     }
 }

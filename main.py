@@ -7,7 +7,7 @@ import interface.timeline as t
 import interface.fileinterface as fi
 
 #    Change the session number to select a perticular session
-session_number = 11
+session_number = 3
 
 #    Initializing some key varialbles
 output_vid = None
