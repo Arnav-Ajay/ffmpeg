@@ -29,7 +29,7 @@ Change background image from:
 	
 Select a perticular session by it's ID:
 
-	ffmpeg/fmpy.py, line 10
+	ffmpeg/main.py, line 10
 
 from inside the project directory, type:
 		
@@ -55,62 +55,62 @@ from inside the project directory, type:
 
 # data.json Format:
 
-	{
-	    "session1": {
+    {
+        "session1": {
 		"num_input" : 4,
 		"input_files": {
-		    "file1" : {
-			"filename" : "LR1.mp4",
-			"filepath" : "./files/LR1.mp4",
-			"filetype" : "mp4",
-			"start_time" : 0,
-			"duration" : 240,
-			"audio_c" : true,
-			"video_c" : true,
-            "flag" : 0
-		    },
-		    "file2" : {
-			"filename" : "WB1.mp4",
-			"filepath" : "./files/WB1.mp4",
-			"filetype" : "mp4",
-			"start_time" : 45,
-			"duration" : 261,
-			"audio_c" : false,
-			"video_c" : true,
-            "flag" : 0
-		    },
-		    "file3" : {
-			"filename" : "vid1.mp4",
-			"filepath" : "./files/vid1.mp4",
-			"filetype" : "mp4",
-			"start_time" : 15,
-			"duration" : 30,
-			"audio_c" : true,
-			"video_c" : true,
-            "flag" : 2
-		    },
-		    "file4" : {
-			"filename" : "vid2.mp4",
-			"filepath" : "./files/vid2.mp4",
-			"filetype" : "mp4",
-			"start_time" : 20,
-			"duration" : 30,
-			"audio_c" : true,
-			"video_c" : true,
-            "flag" : 1
-		    }
+            "file1" : {
+                "filename" : "LR1.mp4",
+                "filepath" : "./files/LR1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 0,
+                "duration" : 240,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 0
+            },
+            "file2" : {
+                "filename" : "WB1.mp4",
+                "filepath" : "./files/WB1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 45,
+                "duration" : 261,
+                "audio_c" : false,
+                "video_c" : true,
+                "flag" : 0
+            },
+            "file3" : {
+                "filename" : "vid1.mp4",
+                "filepath" : "./files/vid1.mp4",
+                "filetype" : "mp4",
+                "start_time" : 15,
+                "duration" : 30,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 2
+            },
+            "file4" : {
+                "filename" : "vid2.mp4",
+                "filepath" : "./files/vid2.mp4",
+                "filetype" : "mp4",
+                "start_time" : 20,
+                "duration" : 30,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 1
+            }
 		},
-		"duration" : 306
-	    }
-	    "session2":{
+        "duration" : 306
+        }
+        "session2":{
 	    	.
 	    	.
 	    	.
-	    },
+        },
 	    .
 	    .
 	    .
-	}
+    }
 
 # Preprocess.py
 
