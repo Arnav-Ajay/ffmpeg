@@ -39,7 +39,7 @@ for i in session_data.input_files:
             input_audios.append(audio)
 
     if(i.video_c == True):
-        video = p.get_video_comp(i, len(session_data.input_files), offset)
+        video = p.get_video_comp_fmpg(i, len(session_data.input_files), offset)
 
         if(video!=None):
             input_videos.append(video)

@@ -36,6 +36,41 @@ def get_data(s_id):
 
     return session
 
+def get_smallest_st(data):
+
+    start_time = []
+
+    for i in data.input_files:
+
+        start_time.append(i.start_time)
+    
+    smallest = 99990
+
+    for i in start_time:
+
+        if(smallest > i):
+            smallest = i
+
+    return smallest
+
+def get_greatest_et(data):
+
+    end_time = []
+
+    for i in data.input_files:
+
+        time = i.start_time + i.duration
+        end_time.append(time)
+    
+    greatest = 0
+
+    for i in end_time:
+
+        if(greatest < i):
+            greatest = i
+
+    return greatest
+
 def get_audio_comp(i, delay):
 
     input_i = ffmpeg.input(i.filepath)
@@ -57,52 +92,7 @@ def get_audio_comp(i, delay):
     else:
         return None
 
-def get_audio_comp_test(i):
-
-    input_i = ffmpeg.input(i.filepath)
-
-    flag = i.flag
-
-    if(flag == 0 or flag == 1):
-
-        if(i.video_c == True and i.audio_c == True):
-            return input_i['a']
-
-        else:
-            return input_i
-
-    elif(flag == 2 or flag == 3):
-
-        return None
-
-    else:
-        return None
-
-def get_video_comp(i, num_inputs, offset):
-
-    input_i = ffmpeg.input(i.filepath)
-
-    size = r.get_dim(num_inputs)
-
-    flag = i.flag
-
-    if(flag == 0 or flag == 2):
-        #    if video component present in input file
-        if(i.video_c == True and i.audio_c == True):
-            return input_i['v'].filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
-
-        #    if audio component present in input file
-        else:
-            return input_i.filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
-
-    elif(flag == 1 or flag == 3):
-
-        return None
-
-    else:
-        return None
-
-def get_video_comp_test(i, num_inputs):
+def get_video_comp(i, num_inputs):
 
     input_i = ffmpeg.input(i.filepath)
 
@@ -140,6 +130,8 @@ def check_num_audios(input_audios):
 
 def create_output(input_audios, audio, overlay, session_num, name):
 
+    overlay.filter("scale", 640, 480)
+
     if(len(input_audios)<3 and audio!=None):
         output = ffmpeg.output(overlay, audio, name, **{'b:v':'48k', 'b:a':'48k'}).run()
 
@@ -151,7 +143,7 @@ def create_output(input_audios, audio, overlay, session_num, name):
             audio = ffmpeg.filter([audio, input_audios[i]], 'amix')
 
         output = ffmpeg.output(overlay, audio, name, **{'b:v':'48k', 'b:a':'48k'}).run()
-
+    
 def create_sub_output(overlay, id, name, sub_input):
 
     name = './temp/sub_op' + str(id) + '.mp4'
@@ -167,3 +159,27 @@ def empty_temp():
     cmd = "rm ./temp/*"
 
     os.system(cmd)
+
+def get_video_comp_fmpg(i, num_inputs, offset):
+
+    input_i = ffmpeg.input(i.filepath)
+
+    size = r.get_dim(num_inputs)
+
+    flag = i.flag
+
+    if(flag == 0 or flag == 2):
+        #    if video component present in input file
+        if(i.video_c == True and i.audio_c == True):
+            return input_i['v'].filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
+
+        #    if audio component present in input file
+        else:
+            return input_i.filter('scale', size[0], -1).filter('setdar', '16/9').setpts('PTS' + offset)
+
+    elif(flag == 1 or flag == 3):
+
+        return None
+
+    else:
+        return None

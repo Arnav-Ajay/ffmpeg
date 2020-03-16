@@ -25,6 +25,99 @@ def convert_to_mono(sesh):
 
     return sesh
 
+def format_session(sesh):
+
+    j = 0
+
+    for i in sesh.input_files:
+
+        j += 1
+
+        if(i.audio_c == True and i.video_c == True):
+            
+            if(i.flag == 1):
+
+                input = ffmpeg.input(i.filepath)
+                audio = input['a'].output('./temp/audio' + str(j) + '.mp4', ac=1,  **{'b:a':'48k'}).run()
+
+                i.filetype = 'mp4'
+                i.filename = 'audio' + str(j) + '.mp4'
+                i.filepath = './temp/audio' + str(j) + '.mp4'
+                i.video_c = False
+                i.flag = 0
+
+            elif(i.flag == 2):
+
+                input = ffmpeg.input(i.filepath)
+                video = input['v'].output('./temp/video' + str(j) + '.mp4',  **{'b:v':'48k'}).run()
+
+                i.filetype = 'mp4'
+                i.filename = 'video' + str(j) + '.mp4'
+                i.filepath = './temp/video' + str(j) + '.mp4'
+                i.audio_c = False
+                i.flag = 0
+
+            elif(i.flag == 3):
+
+                i.audio_c = False
+                i.video_c = False
+                i.flag = 0
+
+            else:
+
+                i.flag = 0
+                print("\nDo Nothing: Default Value Selected\n")
+
+        elif(i.audio_c == True and i.video_c == False):
+            
+            if(i.flag == 1):
+
+                print("\nDo Nothing: Default Value Selected\n")
+                i.flag = 0
+
+            elif(i.flag == 2):
+
+                print("\nVideo does not exist for file : " + i.filename + "\n")
+                i.flag = 0
+
+            elif(i.flag == 3):
+
+                i.audio_c = False
+                i.flag = 0
+
+            else:
+
+                i.flag = 0
+                print("\nDo Nothing: Default Value Selected\n")
+
+        elif(i.audio_c == False and i.video_c == True):
+            
+            if(i.flag == 1):
+
+                print("\nAudio does not exist for file : " + i.filename + "\n")
+                i.flag = 0
+
+            elif(i.flag == 2):
+
+                print("\nDo Nothing: Default Value Selected\n")
+                i.flag = 0
+
+            elif(i.flag == 3):
+
+                i.video_c = False
+                i.flag = 0
+
+            else:
+
+                print("\nDo Nothing: Default Value Selected\n")
+                i.flag = 0
+
+        else:
+
+            print("\n File : " + i.filename + " does not have audio nor video component\n")
+
+    return sesh
+
 def get_dim(i):
 
     w = 0

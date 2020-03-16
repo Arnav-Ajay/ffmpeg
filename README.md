@@ -25,15 +25,15 @@ To Run:
 
 Change background image from:
 	
-	ffmpeg/fmpg.py, line 7
+	ffmpeg/main.py, line 32
 	
 Select a perticular session by it's ID:
 
-	ffmpeg/fmpy.py, line 6
+	ffmpeg/fmpy.py, line 10
 
 from inside the project directory, type:
 		
-	python3 fmpg.py
+	python3 main.py
 
 # Directory Structure
 	
@@ -42,7 +42,7 @@ from inside the project directory, type:
 	│   ├── background.png
 	│   ├── vid1.mp4
 	│   ├── vid2.mp4
-	├── fmpg.py				#    FFMPEG-Python Implementation
+	├── main.py				#    FFMPEG-Python Implementation
 	├── interface				#    Directory containing File and Session Interface
 	│   ├── fileinterface.py
 	│   └── sessioninterface.py
@@ -116,12 +116,18 @@ from inside the project directory, type:
 
 	get_data() : Fetches data from json file to File and Session Object
 	
+	get_smallest_st() : Returns the smallest start time in the session files
+
+	get_greatest_et() : Returns the gratest end time in the session files
+
 	get_audio_component() : Seperates Audio Component from input files
 	
 	get_video_component() : Seperates Video Component from input files
 	
 	check_num_audios() : Return mixed audio for no. of audios < 3. This is the first step of mixing audios together
 	
+	create_sub_output() : Returns list of overlaid video component of each time interval
+
 	create_output() : Creates output for more than 1 input files
 	
 	empty_temp() : Deletes all files in Temp folder
@@ -130,29 +136,17 @@ from inside the project directory, type:
 
 	convert_to_mono() : Converts all webm files and files containing audio to mono, mp4 format.
 
+	format_session() : Formats the input session w.r.t flag. returns a session object.
+
 	get_dim() : Size of input file differs based of no. of inputs.
 	
 	get_cord() : Position of input file differs based of no. of inputs.
 	
-# Fmpg.py
+# Main.py
 
-	P.get_data()
-	
-	R.convert_to_mono()
-	
-	P.get_audio_component()
-	
-	P.get_video_component()
-	
-	R.get_cord()
+    check_num_running() : Returns no of files running at a perticular time
 
-	P.check_num_audios()
-	
-	P.create_output()
-		
-		R.get_dim()
-		
-	P.empty_temp()
+	get_running_files() : Returns a list of files running at a perticular time
 
 # Attributes of File Object
 
@@ -173,6 +167,13 @@ from inside the project directory, type:
 # Attributes of Session Object
 
 	num_inputs : Number of input files (Number),
-	input_files : list of input files (File Object),
+	input_files : list of input files (List of File Object),
 	duration : Total duration of session (in Seconds)
 
+# Attributes in Timeline Object
+
+	id : id of the time interval (Number)
+    start time : start time of the time interval (in Seconds)
+    duration : Total duration of of that time interval (in Seconds)
+	num_inputs : Number of input files (Number)
+    input_files : List of input files (List of File Object)
