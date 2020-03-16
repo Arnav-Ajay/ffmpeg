@@ -12,12 +12,15 @@ def convert_to_mono(sesh):
             continue
 
         elif(i.audio_c == True):
-            ffmpeg.input(i.filepath).output('./temp/mono_mp4' + str(j) + '.mp4', ac=1,  **{'b:a':'48k'}, max_muxing_queue_size=99000).run()
+            input_1 = ffmpeg.input(i.filepath)
+            video = input_1["v"].filter("scale", 640, 480)
+            audio = input_1["a"]
+            output = ffmpeg.output(video, audio, './temp/mono_mp4' + str(j) + '.mp4', ac=1,  **{'b:a':'48k'}, max_muxing_queue_size=99000).run()
 
         else:
-            ffmpeg.input(i.filepath).output('./temp/mono_mp4' + str(j) + '.mp4',  **{'b:v':'48k'}, max_muxing_queue_size=99000).run()
+            ffmpeg.input(i.filepath).filter("scale", 640, 480).output('./temp/mono_mp4' + str(j) + '.mp4',  **{'b:v':'48k'}, max_muxing_queue_size=99000).run()
 
-        input_i = ffmpeg.input('./temp/mono_mp4' + str(j) + '.mp4', max_muxing_queue_size=99000)
+        input_i = ffmpeg.input('./temp/mono_mp4' + str(j) + '.mp4')
 
         i.filetype = 'mp4'
         i.filename = 'mono_mp4' + str(j) + '.mp4'

@@ -135,7 +135,7 @@
                 "flag" : 0
             }
         },
-        "duration" : 340
+        "duration" : 318
     },
     "session4": {
         "num_input" : 4,
@@ -374,5 +374,67 @@
             }
         },
         "duration" : 111
+    },
+    "session12": {
+        "num_input" : 1,
+        "input_files": {
+            "file1" : {
+                "filename" : "WB4.webm",
+                "filepath" : "./files/WB4.webm",
+                "filetype" : "webm",
+                "start_time" : 0,
+                "duration" : 318,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 2
+            }
+        },
+        "duration" : 318
+    },
+    "session13": {
+        "num_input" : 4,
+        "input_files": {
+            "file1" : {
+                "filename" : "LR5.webm",
+                "filepath" : "./files/LR5.webm",
+                "filetype" : "webm",
+                "start_time" : 5,
+                "duration" : 269,
+                "audio_c" : true,
+                 "video_c" : true,
+                 "flag" : 0
+            },
+            "file2" : {
+                "filename" : "WB4.webm",
+                "filepath" : "./files/WB4.webm",
+                "filetype" : "webm",
+                "start_time" : 0,
+                "duration" : 318,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 2
+            },
+            "file3" : {
+                "filename" : "LR6.webm",
+                "filepath" : "./files/LR6.webm",
+                "filetype" : "webm",
+                "start_time" : 25,
+                "duration" : 239,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 0
+            },
+            "file4" : {
+                "filename" : "LR7.webm",
+                "filepath" : "./files/LR7.webm",
+                "filetype" : "webm",
+                "start_time" : 40,
+                "duration" : 300,
+                "audio_c" : true,
+                "video_c" : true,
+                "flag" : 0
+            }
+        },
+        "duration" : 340
     }
 }
