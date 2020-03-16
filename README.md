@@ -45,7 +45,8 @@ from inside the project directory, type:
 	├── main.py				#    FFMPEG-Python Implementation
 	├── interface				#    Directory containing File and Session Interface
 	│   ├── fileinterface.py
-	│   └── sessioninterface.py
+	│   ├── sessioninterface.py
+	|   └── timeline.py
 	├── output				#   Directory containing all output files 
 	│   ├── session1.mp4
 	├── preprocess.py			#    Support python file for fmpg.py

@@ -1,0 +1,40 @@
+Task 1: 
+        To get familiar with ffmpeg, an open-source tool for handling video, audio, and other multimedia files and streams.
+
+        To get familiar with ffmpeg-python, a wrapper for developing in python.
+
+Task 2:
+
+        Given a number of different files, create a single output file with all input streams merged together
+
+    Outcome : Completed using ffmpeg tool and ffmpeg-python library
+
+Task 3:
+
+        Given a json file, create a program using ffmpeg-python library, which outputs a single merged file based on time of their occurance.
+
+    Outcome : Completed for mp4 files
+
+Task 4:
+        Same as Task 3 for webm files
+
+Task 5:
+
+        Dynamic scaling of input files.
+
+    Outcome : Error for 1 test case: given a list of input files, if we only need audio of that file. ie,
+                    auio_c = True
+                    vdeo_c = True
+                    flag = 1
+
+                and it either starts first or ends last.
+
+            For rest cases, works good.
+
+Task 6:
+
+        Handle the error case in Task 6:
+
+Work Left:
+
+        Resolution during scaling:  at (640x480) on 1 file is displayed. so 640x480 is not niminum, but maximum
